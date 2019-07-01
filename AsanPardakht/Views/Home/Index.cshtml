@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .rtl {
+        direction: rtl;
+    }
+</style>
+<div class="col-md-12 rtl">
+
+    @{
+        using (Html.BeginForm("RedirectToBank", "Home", FormMethod.Post))
+        {
+
+            @Html.AntiForgeryToken()
+
+
+
+
+
+            <h3>طرح آسان خرید</h3>
+            <label class="control-label">مبلغ کل </label>
+            @Model
+            <br />
+            <label class="control-label"> تعداد اقساط </label>
+            <p>3</p>
+
+
+            <button type="submit" class="btn btn-default">پرداخت</button>
+
+        }
+    }
+</div>

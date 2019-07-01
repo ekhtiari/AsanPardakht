@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Verify";
+}
+
+<h2>Verify</h2>
+
+
+<h4>Result</h4>
+@{
+    if ( ViewData["result"]!=null)
+    {
+        <p>کد وضعیت</p>
+        <p>@ViewData["result"].ToString()</p>
+
+    }
+    if ( ViewData["paymentid"]!=null)
+    {
+        <p>کد پیگیری</p>
+        <p>@ViewData["paymentid"].ToString()</p>
+    }
+    if (ViewData["referid"]!=null)
+    {
+        <p>رسید دیجیتال</p>
+        <p>@ViewData["referid"].ToString()</p>
+    }
+
+    if (ViewData["err"]!=null)
+    {
+        <p>بروز خطا</p>
+    }
+}
